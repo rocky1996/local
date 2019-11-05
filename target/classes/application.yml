@@ -18,3 +18,22 @@ eureka:
     fetch-registry: false
     service-url:
       defaultZone: http://127.0.0.1:6868/eureka
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            #断路器超时时间
+            timeoutInMilliseconds: 5000
+  threadpool:
+    default:
+      coreSize: 200
+      maximumSize: 200
+      maxQueueSize: 1000  #BlockingQueue的最大队列数
+      queueSizeRejectionThreshold: 1000 #即使maxQueueSize没有达到，达到queueSizeRejectionThreshold该值后，请求也会被拒绝
+
+ribbon:
+  ReadTimeout: 3000
+  ConnectTimeout: 3000

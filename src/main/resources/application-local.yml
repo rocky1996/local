@@ -12,3 +12,8 @@ feign:
   user:
     server-name: remote
     url: http://localhost:8899
+
+kafka:
+  server:
+  max-block-ms: 10000
+  topic: sci_test_data_beibo
