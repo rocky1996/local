@@ -1,12 +1,11 @@
-package com.acat.service.impl;
+package com.acat.service.test.impl;
 
 import com.acat.dao.UserDao;
 import com.acat.entity.UserEntity;
 import com.acat.manage.SystemFeignManager;
 import com.acat.response.SendResponse;
-import com.acat.service.TestService;
+import com.acat.service.test.TestService;
 import com.acat.vo.UserVo;
-import com.netflix.discovery.converters.Auto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

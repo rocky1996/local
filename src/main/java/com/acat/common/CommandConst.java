@@ -7,13 +7,19 @@ package com.acat.common;
  */
 public class CommandConst {
 
-    //正常玩耍状态
+    /**
+     * 正常玩耍状态
+     */
     public static final String NORMAL = "NORMAL";
 
-    //开始发苹果状态
+    /**
+     * 开始发苹果状态
+     */
     public static final String START_SEND_APPLE = "START_SEND_APPLE";
 
-    //停止发水果状态
+    /**
+     * 停止发水果状态
+     */
     public static final String STOP_SEND_APPLE = "STOP_SEND_APPLE";
 
 }
