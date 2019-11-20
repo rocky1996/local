@@ -6,6 +6,8 @@ import com.acat.response.SendResponse;
 import com.acat.service.cache.RedisService;
 import com.acat.service.sendApple.SendAppleService;
 import com.alibaba.fastjson.JSON;
+import org.apache.http.Header;
+import org.apache.http.message.BasicHeader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +22,13 @@ import java.text.MessageFormat;
  */
 @Service("sendAppleService")
 public class SendAppleServiceImpl implements SendAppleService {
+
+    private Header[] headers = new BasicHeader[]{
+            new BasicHeader("Content-Type", "application/json"),
+            new BasicHeader("areaCode", "010"),
+            new BasicHeader("ics-token", "446a654cf768818ef76645fd8a09eacd")
+    };
+
 
     private Logger logger = LoggerFactory.getLogger(SendAppleServiceImpl.class);
 
