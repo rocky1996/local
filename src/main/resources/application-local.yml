@@ -25,6 +25,13 @@ feign:
     url: http://localhost:8899
 
 kafka:
-  server:
-  max-block-ms: 10000
-  topic: sci_test_data_beibo
+  bootstrap-servers: 127.0.0.1:9092
+  consumer:
+    group-id: 0
+    key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+  producer:
+    key-serializer: org.apache.kafka.common.serialization.StringSerializer
+    value-deserializer: org.apache.kafka.common.serialization.StringSerializer
+    batch-size: 65536
+    buffer-memory: 524288

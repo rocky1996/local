@@ -3,6 +3,8 @@ spring:
   profiles:
     active: local
 
+
+
 #服务器相关配置
 server:
   port: 8080
